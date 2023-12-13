@@ -1,11 +1,18 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { FlatList, StyleSheet, View } from 'react-native';
 import AddInput from './components/AddInput';
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <AddInput/>
+    <View>
+      <View>
+        <StatusBar/>
+      </View>
+      <FlatList data={data}
+      renderItem={({item})=> (
+        console.log(item)
+      )}/>
+      <View></View>
     </View>
   );
 }
