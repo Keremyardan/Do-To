@@ -1,7 +1,7 @@
 import React from "react";
-import { View } from "react-native";
+import { View, Text } from "react-native";
 
-let today = new Date().toISOString().slice(0,10);
+const today = new Date().toISOString().slice(0,10);
 
 const Header = () => {
     return (
@@ -11,3 +11,5 @@ const Header = () => {
         </View>
     )
 }
+
+export default Header;
