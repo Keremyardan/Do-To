@@ -8,7 +8,7 @@ const App = () => {
 
   const [tasks, setTasks] = useState([]);
 
-  const addTask = () => {
+  const addTask = (task) => {
     if (task==null) return;
     setTasks([...tasks, task]);
     Keyboard.dismiss();
@@ -19,15 +19,15 @@ const App = () => {
   }
 
   return (
-    <View>
-      <Text>
+    <View style={styles.container}>
+      <Text styles={styles.heading}>
         Do-To..
       </Text>
-      <ScrollView>
+      <ScrollView style={styles.scrollview}>
         {
           tasks.map((task,index)=> {
             return(
-              <View key={index}>
+              <View key={index} style={styles.taskcontainer}>
                 <TaskItem index={index+1} task={task} deleteTask={()=> deleteTask(index)}/>
               </View>
             );
@@ -43,16 +43,19 @@ const styles = StyleSheet.create ({
   container:{
     flex:1,
     backgroundColor:'#FFC594',
-    
   },
-  text:{
+  heading: {
     color:'#fff',
-    borderWidth:1,
-    fontSize:30,
-    //fontWeight:300,
+    //fontSize:20,
     marginTop:30,
     marginBottom:10,
     marginLeft:20,
+  },
+  scrollview:{
+    marginBottom:70
+  },
+  taskcontainer:{
+    marginTop:20,
   }
 })
 
