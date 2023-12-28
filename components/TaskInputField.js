@@ -1,6 +1,6 @@
 import { View, KeyboardAvoidingView, StyleSheet, TextInput, TouchableOpacity } from 'react-native'
 import React, {useState}  from 'react'
-import { MaterialIcons } from '@expo/vector-icons';
+import { FontAwesome } from '@expo/vector-icons';
 
 
 const TaskInputField = (props) => {
@@ -12,14 +12,13 @@ const TaskInputField = (props) => {
     }
 
   return (
-    <KeyboardAvoidingView 
-    >
-      <TextInput 
+    <KeyboardAvoidingView style={styles.container}>
+      <TextInput style={styles.task}
       value={task} onChangeText={text=>setTask(text)} placeholder={'Write a task'} placeholderTextColor={'#fff'}/>
-      <TouchableOpacity 
+      <TouchableOpacity
       onPress={() => handleAddTask(task)}>
         <View>
-           <MaterialIcons name='keyboard-arrow-up' size={24} color='black' />
+           <FontAwesome style={styles.icon} name='plus-circle' size={28} color='black' />
         </View>
       </TouchableOpacity>
     </KeyboardAvoidingView>
@@ -28,7 +27,21 @@ const TaskInputField = (props) => {
 
 const styles= StyleSheet.create ({
   container:{
-    
+    alignItems:'center',
+    flexDirection:'row',
+    marginBottom:10,
+    marginLeft:5
+  },
+  task: {
+    borderWidth:1,
+    borderRadius:7,
+    backgroundColor:'#CADCFC',
+    width:350,
+    height:50,  
+    padding:13, 
+  },
+  icon:{
+    marginLeft:5,
   }
 })
 

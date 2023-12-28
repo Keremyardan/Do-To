@@ -53,7 +53,7 @@ const App = () => {
 
   return (
     <View style={styles.container}>
-      <Text style={styles.heading}>Do-To..</Text>
+      <Text style={styles.heading}>Tasks</Text>
       <ScrollView style={styles.scrollview}>
         {tasks.map((task, index) => (
           <View key={index} style={styles.taskcontainer}>
@@ -69,7 +69,7 @@ const App = () => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#FFC594',
+    backgroundColor: '#8AB6F9',
   },
   heading: {
     color: '#fff',
