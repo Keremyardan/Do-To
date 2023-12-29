@@ -57,7 +57,7 @@ const App = () => {
       <ScrollView style={styles.scrollview}>
         {tasks.map((task, index) => (
           <View key={index} style={styles.taskcontainer}>
-            <TaskItem index={index + 1} task={task} deleteTask={() => deleteTask(index)} />
+            <TaskItem task={task} deleteTask={() => deleteTask(index)} />
           </View>
         ))}
       </ScrollView>
@@ -69,13 +69,14 @@ const App = () => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#8AB6F9',
+    backgroundColor: '#606060FF',
   },
   heading: {
-    color: '#fff',
+    color: '#D6ED17FF',
     marginTop: 30,
     marginBottom: 10,
     marginLeft: 20,
+    fontSize:30
   },
   scrollview: {
     marginBottom: 70,
