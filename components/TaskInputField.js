@@ -30,7 +30,7 @@ const styles= StyleSheet.create ({
     alignItems:'center',
     flexDirection:'row',
     marginLeft:5,
-    
+    marginBottom:10
   },
   task: {
     borderWidth:1,
@@ -39,6 +39,7 @@ const styles= StyleSheet.create ({
     width:350,
     height:50,  
     padding:13, 
+    
   },
   icon:{
     marginLeft:5,

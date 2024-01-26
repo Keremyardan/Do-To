@@ -14,8 +14,7 @@
     "expo-dev-client": "~3.3.7",
     "expo-status-bar": "~1.11.1",
     "react": "18.2.0",
-    "react-native": "0.73.2",
-    "react-native-google-mobile-ads": "^12.10.0"
+    "react-native": "0.73.2"
   },
   "devDependencies": {
     "@babel/core": "^7.20.0"

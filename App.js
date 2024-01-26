@@ -3,8 +3,6 @@ import React, { useState, useEffect } from 'react';
 import TaskInputField from './components/TaskInputField';
 import TaskItem from './components/TaskItem';
 import AsyncStorage from '@react-native-async-storage/async-storage';
-import 'expo-dev-client'
-import Banner from './components/ads/Banner';
 
 const App = () => {
   const [tasks, setTasks] = useState([]);
@@ -62,9 +60,8 @@ const App = () => {
             <TaskItem task={task} deleteTask={() => deleteTask(index)} />
           </View>
         ))}
-      <TaskInputField addTask={addTask} />
       </ScrollView>
-      <Banner/>
+      <TaskInputField addTask={addTask} />
     </SafeAreaView>
   );
 };
